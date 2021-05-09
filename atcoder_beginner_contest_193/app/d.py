@@ -29,3 +29,4 @@ for s, t in perms:
         s_wins += 1
 
 print(s_wins/len(perms))
+
