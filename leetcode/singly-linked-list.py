@@ -1,10 +1,12 @@
 class MyLinkedList:
     """
+    case 1
     >>> obj = MyLinkedList()
     >>> obj.addAtIndex(1, 0)
     >>> obj.get(0)
     -1
 
+    case 2
     >>> obj = MyLinkedList()
     >>> obj.addAtHead(1)
     >>> obj.addAtTail(3)
@@ -15,10 +17,12 @@ class MyLinkedList:
     >>> obj.get(1)
     3
 
+    case 3
     >>> obj = MyLinkedList()
     >>> obj.addAtHead(1)
     >>> obj.deleteAtIndex(0)
 
+    case 4
     >>> obj = MyLinkedList()
     >>> obj.addAtHead(7)
     >>> obj.addAtHead(2)
@@ -28,10 +32,65 @@ class MyLinkedList:
     >>> obj.addAtHead(6)
     >>> obj.addAtTail(4)
     >>> obj.get(4)
-    
+    4
     >>> obj.addAtHead(4)
     >>> obj.addAtIndex(5, 0)
     >>> obj.addAtHead(6)
+
+    case 5
+    >>> obj = MyLinkedList()
+    >>> obj.addAtTail(1)
+    >>> obj.get(0)
+    1
+
+    case 6
+    >>> obj = MyLinkedList()
+    >>> obj.addAtHead(2)
+    >>> obj.deleteAtIndex(1)
+    >>> obj.addAtHead(2)
+    >>> obj.addAtHead(7)
+    >>> obj.addAtHead(3)
+    >>> obj.addAtHead(2)
+    >>> obj.addAtHead(5)
+    >>> obj.addAtTail(5)
+    >>> obj.get(5)
+    2
+    >>> obj.deleteAtIndex(6)
+    >>> obj.deleteAtIndex(4)
+
+    case 7
+    >>> obj = MyLinkedList()
+    >>> obj.addAtHead(4)
+    >>> obj.get(1)
+    -1
+    >>> obj.addAtHead(1)
+    >>> obj.addAtHead(5)
+    >>> obj.deleteAtIndex(3)
+    >>> obj.addAtHead(7)
+    >>> obj.get(3)
+    4
+    >>> obj.addAtHead(1)
+    >>> obj.deleteAtIndex(4)
+
+    case 8
+    >>> obj = MyLinkedList()
+    >>> obj.addAtHead(1)
+    >>> obj.addAtTail(3)
+    >>> obj.addAtIndex(1, 2)
+    >>> obj.get(1)
+    2
+    >>> obj.deleteAtIndex(1)
+    >>> obj.get(1)
+    3
+    >>> obj.get(3)
+    -1
+    >>> obj.deleteAtIndex(3)
+    >>> obj.deleteAtIndex(0)
+    >>> obj.get(0)
+    3
+    >>> obj.deleteAtIndex(0)
+    >>> obj.get(0)
+    -1
     """
 
     def __init__(self):
@@ -94,86 +153,3 @@ class MyLinkedList:
                 self.next = self.next.next
         elif self.next is not None:
             self.next = self.next.next
-
-
-"""
-obj = MyLinkedList()
-obj.addAtHead(7)
-obj.addAtHead(2)
-obj.addAtHead(1)
-obj.addAtIndex(3, 0)
-obj.deleteAtIndex(2)
-obj.addAtHead(6)
-obj.addAtTail(4)
-obj.get(4)
-obj.addAtHead(4)
-obj.addAtIndex(5, 0)
-obj.addAtHead(6)
-"""
-
-"""
-obj = MyLinkedList()
-obj.addAtTail(1)
-get(0)
-"""
-
-"""
-obj = MyLinkedList()
-obj.addAtHead(2)
-obj.deleteAtIndex(1)
-obj.addAtHead(2)
-obj.addAtHead(7)
-obj.addAtHead(3)
-obj.addAtHead(2)
-obj.addAtHead(5)
-obj.addAtTail(5)
-obj.get(5)
-obj.deleteAtIndex(6)
-obj.deleteAtIndex(4)
-"""
-
-"""
-obj = MyLinkedList()
-obj.addAtHead(4)
-obj.get(1)
-obj.addAtHead(1)
-obj.addAtHead(5)
-obj.deleteAtIndex(3)
-obj.addAtHead(7)
-obj.get(3)
-obj.get(3)
-obj.get(3)
-obj.addAtHead(1)
-obj.deleteAtIndex(4)
-"""
-
-"""
-obj = MyLinkedList()
-obj.addAtHead(1)
-obj.addAtTail(3)
-obj.addAtIndex(1, 2)
-obj.get(1)
-obj.deleteAtIndex(1)
-obj.get(1)
-obj.get(3)
-obj.deleteAtIndex(3)
-obj.deleteAtIndex(0)
-obj.get(0)
-obj.deleteAtIndex(0)
-obj.get(0)
-"""
-
-"""
-obj = MyLinkedList()
-obj.addAtHead(7)
-obj.addAtHead(2)
-obj.addAtHead(1)
-obj.addAtIndex(3, 0)
-obj.deleteAtIndex(2)
-obj.addAtHead(6)
-obj.addAtTail(4)
-obj.get(4)
-obj.addAtHead(4)
-obj.addAtIndex(5, 0)
-obj.addAtHead(6)
-"""
